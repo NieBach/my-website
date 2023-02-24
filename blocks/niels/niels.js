@@ -3,7 +3,7 @@ export default async function decorate(block) {
     const text = block.querySelector(':scope > div > div');
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", 'https://main--my-website--niebach.hlx.live/helix-agenda.json', true);
+    rawFile.open("GET", 'helix-agenda.json', true);
     rawFile.onreadystatechange = function() {
         if (rawFile.readyState === 4 && rawFile.status == "200") {
             var data = JSON.parse(rawFile.responseText);
